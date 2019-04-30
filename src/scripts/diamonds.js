@@ -29,6 +29,9 @@ const ringStyles = [
   { style: "Vintage", price: 965 }
 ];
 
+
+// customer-requested ring object, the final structure
+
 var ring1 = {
   style: "Modern",
   karats: 1,
