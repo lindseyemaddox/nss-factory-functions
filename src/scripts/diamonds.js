@@ -57,12 +57,12 @@ const createCustomRing = (style, karats, metal) => {
 // to build an HTML component that represents a new customer order
 
 const newRingOrder = createCustomRing(ringStyles[1], diamonds[2], metals[2]);
-
+console.log(newRingOrder);
 
 let metalsSelect = document.getElementById("metals-select");
 
 
 for (var i = 0; i < metals.length; i++) {
   let option = metals[i];
-  metalsSelect.options[metalsSelect.options.length] = new Option(metals[i]);
+  metalsSelect.options[metalsSelect.options.length] = new Option(option.metal);
 };
