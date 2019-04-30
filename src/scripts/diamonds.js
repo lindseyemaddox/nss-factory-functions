@@ -58,35 +58,11 @@ const createCustomRing = (style, karats, metal) => {
 
 const newRingOrder = createCustomRing(ringStyles[1], diamonds[2], metals[2]);
 
-const cart = [];
 
-function addRingToCart(newRingOrder) {
-  cart.push(newRingOrder);
-  buildTheDom();
+let metalsSelect = document.getElementById("metals-select");
+
+
+for (var i = 0; i < metals.length; i++) {
+  let option = metals[i];
+  metalsSelect.options[metalsSelect.options.length] = new Option(metals[i]);
 };
-
-let output = document.getElementById("output");
-
-let buildTheDom = () => {
-  output.innerHTML = "";
-  for (var i = 0; i < cart.length; i++) {
-    let ringInCart = cart[i];
-    output.innerHTML += ringComponent(newRingOrder);
-  };
-};
-
-let ringComponent = (cart) => {
-  return `
-    <div class="newRingOrder">
-      <h4>Style: ${cart.ringStyles[1]}</h4>
-      <p>Diamonds: ${cart.diamonds[2]}</p>
-      <p>Metal: ${cart.metals[2]}</p>
-    </div>
-  `;
-};
-
-let showCart = document.getElementById("cart");
-
-showCart.addEventListener("click", function () {
-  ringComponent();
-});

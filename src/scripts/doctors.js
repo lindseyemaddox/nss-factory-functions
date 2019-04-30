@@ -8,3 +8,16 @@ const doctor = {
   address: "404 Epidural Way"
 };
 
+const pet = {
+  name: "Stella",
+  breed: "Boxer"
+};
+
+
+const createDoctor = (name, specialty, address) => {
+  return {
+    name: name.name,
+    specialty: specialty.specialty,
+    address: address.address
+  };
+};
